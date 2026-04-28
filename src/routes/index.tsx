@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CTAButton } from "@/components/CTAButton";
-import { StickyBuyBar } from "@/components/StickyBuyBar";
 import { StarRating } from "@/components/StarRating";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import {
@@ -101,7 +100,7 @@ function SalesPage() {
             ))}
           </div>
 
-          <CTAButton scrollTo="oferta">QUERO COMEÇAR AGORA POR R$67</CTAButton>
+          <CTAButton scrollTo="vsl">QUERO COMEÇAR AGORA POR R$67</CTAButton>
 
           <div className="flex items-center justify-center gap-3 mt-4 text-xs text-muted-foreground">
             <ShieldCheck className="size-4 text-success" />
@@ -119,7 +118,7 @@ function SalesPage() {
       </section>
 
       {/* VSL */}
-      <section className="px-4 py-10 bg-card/30">
+      <section id="vsl" className="px-4 py-10 bg-card/30">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-5">
             Em <span className="text-gradient-gold">60 segundos</span> eu te explico tudo
@@ -134,7 +133,7 @@ function SalesPage() {
       </section>
 
       {/* PARA QUEM É — 3 pilares */}
-      <section className="px-4 py-14">
+      <section id="para-quem-e" className="px-4 py-14">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs uppercase tracking-widest text-primary font-bold">Para quem é</span>
@@ -178,13 +177,13 @@ function SalesPage() {
           </div>
 
           <div className="mt-8 max-w-md mx-auto">
-            <CTAButton scrollTo="oferta">QUERO MINHA RENDA EXTRA</CTAButton>
+            <CTAButton scrollTo="movimento">QUERO MINHA RENDA EXTRA</CTAButton>
           </div>
         </div>
       </section>
 
       {/* STORYTELLING — Por que o mercado virou o novo ouro */}
-      <section className="px-4 py-14 bg-card/30">
+      <section id="movimento" className="px-4 py-14 bg-card/30">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             <span className="text-xs uppercase tracking-widest text-primary font-bold">O Movimento</span>
@@ -239,7 +238,7 @@ function SalesPage() {
       </section>
 
       {/* TRIÂNGULO DA LOCAÇÃO */}
-      <section className="px-4 py-14">
+      <section id="triangulo" className="px-4 py-14">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs uppercase tracking-widest text-primary font-bold">O Método</span>
@@ -285,7 +284,7 @@ function SalesPage() {
           </p>
 
           <div className="mt-8 max-w-md mx-auto">
-            <CTAButton scrollTo="oferta" />
+            <CTAButton scrollTo="dor-vs-solucao" />
           </div>
         </div>
       </section>
@@ -322,7 +321,7 @@ function SalesPage() {
       </section>
 
       {/* PAIN VS SOLUTION */}
-      <section className="px-4 py-14 bg-card/30">
+      <section id="dor-vs-solucao" className="px-4 py-14 bg-card/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3">
             Você não tem medo de começar.
@@ -380,7 +379,7 @@ function SalesPage() {
       </section>
 
       {/* WHAT YOU GET — modules */}
-      <section className="px-4 py-14">
+      <section id="conteudo" className="px-4 py-14">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs uppercase tracking-widest text-primary font-bold">O Conteúdo</span>
@@ -431,13 +430,13 @@ function SalesPage() {
           </div>
 
           <div className="mt-10 max-w-md mx-auto">
-            <CTAButton scrollTo="oferta" />
+            <CTAButton scrollTo="depoimentos" />
           </div>
         </div>
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="px-4 py-14">
+      <section id="depoimentos" className="px-4 py-14">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs uppercase tracking-widest text-primary font-bold">Resultados Reais</span>
@@ -661,7 +660,6 @@ function SalesPage() {
         </p>
       </footer>
 
-      <StickyBuyBar />
     </div>
   );
 }
