@@ -9,9 +9,9 @@ import {
   Quote, Triangle, Rocket, DollarSign,
 } from "lucide-react";
 import heroCar from "@/assets/hero-car.jpg";
-import ebookTablet from "@/assets/ebook-tablet.png";
+import ebookTablet from "@/assets/ebook-tablet.webp";
 import { VturbPlayer } from "@/components/VturbPlayer";
-import mentor from "@/assets/mentor.jpg";
+import mentor from "@/assets/mentor.webp";
 import dep1 from "@/assets/depoimentos/A1.webp";
 import dep2 from "@/assets/depoimentos/A2.webp";
 import dep3 from "@/assets/depoimentos/A3.webp";
