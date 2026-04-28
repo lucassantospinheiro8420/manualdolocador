@@ -522,7 +522,7 @@ function SalesPage() {
                   <p className="text-6xl sm:text-7xl font-bold text-gradient-gold leading-none my-2">
                     R$67
                   </p>
-                  <p className="text-xs text-muted-foreground mb-5">à vista · ou 12x de R$6,90</p>
+                  <p className="text-xs text-muted-foreground mb-5">à vista · ou 12x de R$6,93</p>
 
                   <div className="mb-5">
                     <p className="text-xs uppercase tracking-widest text-destructive font-bold mb-2 animate-pulse">
