@@ -8,7 +8,6 @@ import {
   Wallet, Lock, Award, PlayCircle, Zap, Target,
   Quote, Triangle, Rocket, DollarSign,
 } from "lucide-react";
-import heroCar from "@/assets/hero-car.jpg";
 import ebookTablet from "@/assets/ebook-tablet.webp";
 import { VturbPlayer } from "@/components/VturbPlayer";
 import mentor from "@/assets/mentor.webp";
@@ -81,6 +80,9 @@ function SalesPage() {
               alt="Manual do Locador de Carro - Transforme Carros em Renda"
               width={900}
               height={1100}
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
               className="drop-shadow-2xl max-h-[420px] w-auto float-anim"
             />
           </div>
