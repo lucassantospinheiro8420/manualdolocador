@@ -1,0 +1,165 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Montserrat", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Dark premium gold theme */
+  --background: oklch(0.13 0.01 60);
+  --foreground: oklch(0.97 0.01 80);
+
+  --card: oklch(0.18 0.015 60);
+  --card-foreground: oklch(0.97 0.01 80);
+
+  --popover: oklch(0.18 0.015 60);
+  --popover-foreground: oklch(0.97 0.01 80);
+
+  --primary: oklch(0.82 0.16 85);          /* gold */
+  --primary-foreground: oklch(0.13 0.01 60);
+
+  --secondary: oklch(0.22 0.02 60);
+  --secondary-foreground: oklch(0.97 0.01 80);
+
+  --muted: oklch(0.22 0.015 60);
+  --muted-foreground: oklch(0.7 0.02 80);
+
+  --accent: oklch(0.78 0.18 70);           /* warm gold */
+  --accent-foreground: oklch(0.13 0.01 60);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.97 0.01 80);
+
+  --success: oklch(0.7 0.18 145);
+  --success-foreground: oklch(0.13 0.01 60);
+
+  --gold: oklch(0.82 0.16 85);
+  --gold-soft: oklch(0.88 0.12 90);
+
+  --border: oklch(0.3 0.02 70 / 60%);
+  --input: oklch(0.25 0.02 60);
+  --ring: oklch(0.82 0.16 85);
+
+  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.14 90), oklch(0.72 0.18 70));
+  --gradient-dark: linear-gradient(180deg, oklch(0.13 0.01 60), oklch(0.09 0.005 60));
+  --gradient-radial-gold: radial-gradient(ellipse at center, oklch(0.82 0.16 85 / 25%), transparent 70%);
+
+  --shadow-gold: 0 10px 40px -10px oklch(0.82 0.16 85 / 50%);
+  --shadow-elevated: 0 20px 60px -20px oklch(0 0 0 / 80%);
+  --shadow-card: 0 4px 20px -4px oklch(0 0 0 / 50%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--gradient-dark);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-radial-gold {
+    background: var(--gradient-radial-gold);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 oklch(0.82 0.16 85 / 60%); }
+    50% { box-shadow: 0 0 0 14px oklch(0.82 0.16 85 / 0%); }
+  }
+
+  .float-anim {
+    animation: floatAnim 4s ease-in-out infinite;
+  }
+
+  @keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.7s ease-out both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
