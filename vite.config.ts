@@ -11,4 +11,16 @@ export default defineConfig({
     tailwindcss(),
     tsConfigPaths(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.names?.includes("ebook-tablet.webp")) {
+            return "assets/ebook-tablet.webp";
+          }
+          return "assets/[name]-[hash][extname]";
+        },
+      },
+    },
+  },
 });
