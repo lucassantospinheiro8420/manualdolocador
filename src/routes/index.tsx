@@ -10,6 +10,7 @@ import {
 import ebookTablet from "@/assets/ebook-tablet.webp";
 import { VturbPlayer } from "@/components/VturbPlayer";
 import mentor from "@/assets/mentor.webp";
+import g1Logo from "@/assets/g1-logo.svg";
 import dep1 from "@/assets/depoimentos/A1.webp";
 import dep2 from "@/assets/depoimentos/A2.webp";
 import dep3 from "@/assets/depoimentos/A3.webp";
@@ -51,29 +52,47 @@ function SalesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Top urgency bar */}
-      <div className="bg-gradient-gold text-primary-foreground text-center py-2 px-3 text-xs sm:text-sm font-bold uppercase tracking-wider sticky top-0 z-40">
-        ⚡ Oferta por tempo limitado · 95% OFF
+      <div className="bg-gradient-gold text-primary-foreground text-center py-2 px-3 sticky top-0 z-40">
+        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">🚗 Você está prestes a conhecer</p>
+        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">o Manual do Locador de Carros</p>
       </div>
 
       {/* HERO */}
-      <section className="relative px-4 pt-8 pb-12 sm:pt-12 sm:pb-16">
+      <section className="relative px-5 pt-5 pb-4 sm:pt-8 sm:pb-8 sm:px-16 md:px-32">
         <div className="absolute inset-0 bg-radial-gold opacity-60 pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto text-center fade-up">
-          <span className="inline-block bg-card border border-primary/40 text-primary text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-            🚗 Manual do Locador de Carro
-          </span>
+        <div className="relative max-w-2xl mx-auto text-center fade-up">
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-5">
-            Lucre <span className="text-gradient-gold">R$3.000 extras</span> por mês com{" "}
-            <span className="text-gradient-gold">Locação de Carros</span> em apenas 30 min/dia
+          <h1 className="text-[1.35rem] sm:text-3xl md:text-4xl font-bold leading-[1.25] mb-3">
+            Descubra como lucrar{" "}
+            <span className="text-gradient-gold">R$3.000 extra por mês</span>{" "}
+            investindo apenas{" "}
+            <span className="text-gradient-gold">30 minutos do seu dia</span>{" "}
+            com Locação de Carros
           </h1>
 
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
-            O método validado para gerar renda mensal com a Uber —
-            <strong className="text-foreground"> mesmo que você não tenha um carro próprio.</strong>
+          <p className="text-xs sm:text-sm text-muted-foreground max-w-lg mx-auto mb-3 leading-relaxed">
+            Uma <strong className="text-foreground">estratégia de locação de veículos</strong> que te permite
+            gerar uma renda mensal com a Uber —{" "}
+            <strong className="text-foreground">mesmo que você não tenha o valor para comprar um carro.</strong>
           </p>
 
-          <div className="flex justify-center mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 w-full mb-4 text-left">
+            {[
+              "Mesmo que você não saiba nada sobre carros.",
+              "Tenha controle e segurança total na locação.",
+              "Evite erros que fazem iniciantes perder dinheiro.",
+              "Escolha somente os motoristas 5 estrelas.",
+            ].map((b) => (
+              <div key={b} className="flex items-center gap-2 bg-primary/15 border border-primary/40 rounded-lg px-3 py-2">
+                <Check className="size-4 text-primary shrink-0" />
+                <span className="text-xs font-medium">{b}</span>
+              </div>
+            ))}
+          </div>
+
+          <CTAButton scrollTo="vsl">TOQUE AQUI PARA GARANTIR SEU ACESSO</CTAButton>
+
+          <div className="flex justify-center mt-4">
             <img
               src={ebookTablet}
               alt="Manual do Locador de Carro - Transforme Carros em Renda"
@@ -82,37 +101,43 @@ function SalesPage() {
               fetchPriority="high"
               loading="eager"
               decoding="sync"
-              className="drop-shadow-2xl max-h-[420px] w-auto float-anim"
+              className="drop-shadow-2xl max-h-[260px] sm:max-h-[380px] w-auto float-anim"
             />
           </div>
+        </div>
+      </section>
 
-          <div className="grid sm:grid-cols-2 gap-2 max-w-xl mx-auto mb-7 text-left">
-            {[
-              "Mesmo que você não saiba nada sobre carros",
-              "Controle e segurança total na locação",
-              "Evite os erros que arruinam iniciantes",
-              "Atraia somente motoristas 5 estrelas",
-            ].map((b) => (
-              <div key={b} className="flex items-start gap-2 bg-card/60 border border-border rounded-lg px-3 py-2.5">
-                <Check className="size-5 text-success shrink-0 mt-0.5" />
-                <span className="text-sm">{b}</span>
+      {/* REPORTAGEM 1 */}
+      <section className="px-4 py-6 bg-card/30">
+        <div className="max-w-2xl mx-auto">
+          <div className="rounded-xl overflow-hidden border border-border shadow-card bg-white text-gray-900">
+            {/* Header G1 */}
+            <div className="bg-[#cc0000] px-3 py-2 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <svg className="size-4 text-white" fill="white" viewBox="0 0 24 24"><rect y="4" width="24" height="2.5" rx="1"/><rect y="11" width="24" height="2.5" rx="1"/><rect y="18" width="24" height="2.5" rx="1"/></svg>
+                <img src={g1Logo} alt="G1" className="h-7 w-auto" />
               </div>
-            ))}
-          </div>
-
-          <CTAButton scrollTo="vsl">QUERO COMEÇAR AGORA POR R$67</CTAButton>
-
-          <div className="flex items-center justify-center gap-3 mt-4 text-xs text-muted-foreground">
-            <ShieldCheck className="size-4 text-success" />
-            <span>Garantia incondicional de 7 dias</span>
-            <span>·</span>
-            <Lock className="size-4" />
-            <span>Compra 100% segura</span>
-          </div>
-
-          <div className="flex items-center justify-center gap-2 mt-5">
-            <StarRating />
-            <span className="text-sm text-muted-foreground">+3000 alunos formados</span>
+              <span className="text-white font-bold text-sm uppercase tracking-[0.2em]">Notícias</span>
+              <svg className="size-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+            </div>
+            {/* Conteúdo */}
+            <div className="px-4 py-3">
+              <h3 className="text-sm sm:text-base font-bold text-gray-900 leading-snug mb-2">
+                Pessoas comuns estão usando um método simples para criar uma nova fonte de renda com locação de carros, recebendo 3 mil por veículo locado.
+              </h3>
+              <p className="text-xs text-gray-500 leading-relaxed mb-3">
+                Em 2025 o mercado de locações cresceu de forma exponencial com a entrada de novos locadores particulares, pessoas comuns que lucram todos os dias.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-gray-400">30/03/2026 · Atualizado há um dia</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="size-5 rounded-full bg-[#1877f2] flex items-center justify-center text-white text-[9px] font-bold">f</span>
+                  <span className="size-5 rounded-full bg-black flex items-center justify-center text-white text-[9px] font-bold">𝕏</span>
+                  <span className="size-5 rounded-full bg-[#25d366] flex items-center justify-center text-white text-[9px] font-bold">W</span>
+                  <span className="size-5 rounded-full bg-[#0077b5] flex items-center justify-center text-white text-[9px] font-bold">in</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,8 +145,8 @@ function SalesPage() {
       {/* VSL */}
       <section id="vsl" className="px-4 py-10 bg-card/30">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-5">
-            Em <span className="text-gradient-gold">60 segundos</span> eu te explico tudo
+          <h2 className="text-base sm:text-xl font-bold mb-5">
+            Em <span className="text-gradient-gold underline">60 segundos</span> vou te explicar <span className="text-gradient-gold">TUDO</span> que você precisa saber de locação de carros!
           </h2>
           <div className="relative rounded-2xl overflow-hidden shadow-elevated border border-primary/30 bg-black">
             <VturbPlayer />
@@ -193,6 +218,20 @@ function SalesPage() {
             <p className="text-muted-foreground">
               Quem entende o método certo transforma um ativo comum em uma fonte de renda previsível.
             </p>
+          </div>
+
+          {/* REPORTAGEM 2 */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="rounded-xl overflow-hidden border border-border shadow-card bg-white text-gray-900">
+              <div className="px-4 py-4">
+                <h3 className="text-sm sm:text-base font-bold text-gray-900 leading-snug mb-2">
+                  A nova febre do ouro: o mercado de locação de carros se tornou a fonte de renda mais rápida que o brasileiro já conheceu.
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Um carro locado pode render 3 mil reais mensais ou mais, sem precisar trabalhar 8h por dia para gerenciar cada veículo locado.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
