@@ -73,7 +73,7 @@ function SalesPage() {
           <p className="text-xs sm:text-sm text-muted-foreground max-w-lg mx-auto mb-3 leading-relaxed">
             Uma <strong className="text-foreground">estratégia de locação de veículos</strong> que te permite
             gerar uma renda mensal com a Uber —{" "}
-            <strong className="text-foreground">mesmo que você não tenha o valor para comprar um carro.</strong>
+            <strong className="text-foreground">sem que você precise dirigir.</strong>
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 w-full mb-4 text-left">
