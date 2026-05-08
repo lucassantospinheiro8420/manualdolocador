@@ -79,7 +79,7 @@ function SalesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 w-full mb-4 text-left">
             {[
               "Mesmo que você não saiba nada sobre carros.",
-              "Tenha controle e segurança total na locação.",
+              "Sem precisar sair do seu emprego.",
               "Evite erros que fazem iniciantes perder dinheiro.",
               "Escolha somente os motoristas 5 estrelas.",
             ].map((b) => (
