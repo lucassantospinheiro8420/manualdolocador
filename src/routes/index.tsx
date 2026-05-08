@@ -90,7 +90,7 @@ function SalesPage() {
             ))}
           </div>
 
-          <CTAButton scrollTo="vsl">TOQUE AQUI PARA GARANTIR SEU ACESSO</CTAButton>
+          <CTAButton scrollTo="vsl">VEJA ABAIXO COMO FUNCIONA</CTAButton>
 
           <div className="flex justify-center mt-4">
             <img

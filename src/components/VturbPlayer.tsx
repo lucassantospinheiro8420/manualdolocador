@@ -13,16 +13,8 @@ declare module "react" {
   }
 }
 
-/**
- * VTurb Smart Player embed.
- * - Player script is preloaded + injected from src/routes/__root.tsx
- * - Autoplay is controlled by the player config (smartAutoPlay/autoplay)
- *   on the VTurb dashboard. The browser will play muted automatically and
- *   the player exposes a "Clique para ouvir" overlay to unmute on tap.
- */
 export function VturbPlayer() {
   useEffect(() => {
-    // Defensive: if root preload didn't inject the script (HMR, etc), inject it now.
     if (document.getElementById("vturb-player-script")) return;
     const s = document.createElement("script");
     s.id = "vturb-player-script";
