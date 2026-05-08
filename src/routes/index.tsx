@@ -53,8 +53,8 @@ function SalesPage() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Top urgency bar */}
       <div className="bg-gradient-gold text-primary-foreground text-center py-2 px-3 sticky top-0 z-40">
-        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">🚗 Você está prestes a conhecer</p>
-        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">o Manual do Locador de Carros</p>
+        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">🚗 Veja como locar seu 1º carro em 24h</p>
+        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">e botar R$3 mil no bolso</p>
       </div>
 
       {/* HERO */}
