@@ -78,10 +78,10 @@ function SalesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 w-full mb-4 text-left">
             {[
-              "Mesmo que você não saiba nada sobre carros.",
-              "Sem precisar sair do seu emprego.",
-              "Evite erros que fazem iniciantes perder dinheiro.",
-              "Escolha somente os motoristas 5 estrelas.",
+              "Ver R$3.000 caindo no PIX todo mês sem dirigir 1km",
+              "Conseguir seu 1º carro mesmo sem ter o valor à vista",
+              "Estratégia validada para copiar e aplicar em 24h",
+              "Sem precisar sair do seu emprego",
             ].map((b) => (
               <div key={b} className="flex items-center gap-2 bg-primary/15 border border-primary/40 rounded-lg px-3 py-2">
                 <Check className="size-4 text-primary shrink-0" />
