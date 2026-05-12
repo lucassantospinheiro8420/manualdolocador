@@ -5,7 +5,7 @@ import { CountdownTimer } from "@/components/CountdownTimer";
 import {
   Check, X, ShieldCheck, Clock, TrendingUp, Car, Users,
   Wallet, Lock, Award, PlayCircle, Zap, Target,
-  Quote, Triangle, Rocket, DollarSign,
+  Quote, Triangle, Rocket, DollarSign, ChevronDown,
 } from "lucide-react";
 import ebookTablet from "@/assets/ebook-tablet.webp";
 import { VturbPlayer } from "@/components/VturbPlayer";
@@ -58,51 +58,56 @@ function SalesPage() {
       </div>
 
       {/* HERO */}
-      <section className="relative px-5 pt-5 pb-4 sm:pt-8 sm:pb-8 sm:px-16 md:px-32">
-        <div className="absolute inset-0 bg-radial-gold opacity-60 pointer-events-none" />
-        <div className="relative max-w-2xl mx-auto text-center fade-up">
+      <section className="relative px-5 pt-6 pb-6 sm:pt-10 sm:pb-12">
+        <div className="absolute inset-0 bg-radial-gold opacity-50 pointer-events-none" />
+        <div className="relative max-w-3xl mx-auto text-center fade-up">
 
-          <h1 className="text-[1.35rem] sm:text-3xl md:text-4xl font-bold leading-[1.25] mb-3">
-            Descubra como lucrar{" "}
-            <span className="text-gradient-gold">R$3.000 extra por mês</span>{" "}
-            investindo apenas{" "}
-            <span className="text-gradient-gold">30 minutos do seu dia</span>{" "}
-            com Locação de Carros
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold leading-[1.25] mb-5 uppercase">
+            Copie a minha estratégia de locação de carros com 4 etapas práticas que{" "}
+            <span className="text-gradient-gold">garantem um rendimento de R$3.000 por carro</span>
           </h1>
 
-          <p className="text-xs sm:text-sm text-muted-foreground max-w-lg mx-auto mb-3 leading-relaxed">
-            Uma <strong className="text-foreground">estratégia de locação de veículos</strong> que te permite
-            gerar uma renda mensal com a Uber —{" "}
-            <strong className="text-foreground">sem que você precise dirigir.</strong>
-          </p>
+          <div className="flex justify-center mb-5">
+            <img
+              src={ebookTablet}
+              alt="Manual do Locador de Carro - Mockup"
+              width={1200}
+              height={800}
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+              className="drop-shadow-2xl max-h-[280px] sm:max-h-[400px] w-auto float-anim"
+            />
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 w-full mb-4 text-left">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
             {[
-              "Ver R$3.000 caindo no PIX todo mês sem dirigir 1km",
-              "Conseguir seu 1º carro mesmo sem ter o valor à vista",
-              "Estratégia validada para copiar e aplicar em 24h",
-              "Sem precisar sair do seu emprego",
+              "Comece do absoluto zero em 24h",
+              "Encontrando os melhores motoristas",
+              "Evitando os 3 riscos que roubam seu lucro",
             ].map((b) => (
-              <div key={b} className="flex items-center gap-2 bg-primary/15 border border-primary/40 rounded-lg px-3 py-2">
-                <Check className="size-4 text-primary shrink-0" />
-                <span className="text-xs font-medium">{b}</span>
+              <div key={b} className="flex items-center gap-2 bg-card border-2 border-primary/40 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 shadow-card">
+                <Check className="size-3.5 sm:size-4 text-primary shrink-0" />
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wide">{b}</span>
               </div>
             ))}
           </div>
 
-          <CTAButton scrollTo="vsl">VEJA ABAIXO COMO FUNCIONA</CTAButton>
+          <CTAButton>QUERO O MANUAL DO LOCADOR</CTAButton>
 
-          <div className="flex justify-center mt-4">
-            <img
-              src={ebookTablet}
-              alt="Manual do Locador de Carro - Transforme Carros em Renda"
-              width={900}
-              height={1100}
-              fetchPriority="high"
-              loading="eager"
-              decoding="sync"
-              className="drop-shadow-2xl max-h-[260px] sm:max-h-[380px] w-auto float-anim"
-            />
+          <div className="mt-5">
+            <p className="text-sm sm:text-base">
+              De <span className="line-through text-destructive font-bold">R$697,00</span>
+            </p>
+            <p className="text-lg sm:text-xl font-bold mt-1">
+              Por apenas <span className="text-gradient-gold">R$67,00</span>
+            </p>
+          </div>
+
+          <div className="flex justify-center mt-5">
+            <div className="size-12 sm:size-14 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-gold animate-bounce">
+              <ChevronDown className="size-7 sm:size-8 text-primary-foreground" strokeWidth={3} />
+            </div>
           </div>
         </div>
       </section>
@@ -201,9 +206,6 @@ function SalesPage() {
             </p>
           </div>
 
-          <div className="mt-8 max-w-md mx-auto">
-            <CTAButton scrollTo="movimento">QUERO MINHA RENDA EXTRA</CTAButton>
-          </div>
         </div>
       </section>
 
@@ -322,9 +324,6 @@ function SalesPage() {
             <span className="text-gradient-gold font-bold">lucrativa, independente e indestrutível.</span>
           </p>
 
-          <div className="mt-8 max-w-md mx-auto">
-            <CTAButton scrollTo="dor-vs-solucao" />
-          </div>
         </div>
       </section>
 
@@ -468,9 +467,6 @@ function SalesPage() {
             ))}
           </div>
 
-          <div className="mt-10 max-w-md mx-auto">
-            <CTAButton scrollTo="depoimentos" />
-          </div>
         </div>
       </section>
 
@@ -503,9 +499,6 @@ function SalesPage() {
             ))}
           </div>
 
-          <div className="mt-10 max-w-md mx-auto">
-            <CTAButton scrollTo="oferta">QUERO SER O PRÓXIMO RESULTADO</CTAButton>
-          </div>
         </div>
       </section>
 
@@ -535,14 +528,14 @@ function SalesPage() {
                 <h3 className="text-lg font-bold mb-4 text-center">📦 O pacote completo:</h3>
                 <ul className="space-y-2.5">
                   {[
-                    { t: "Manual do Locador (Completo)", v: "R$ 397" },
-                    { t: "🎁 BÔNUS: 3 Encontros ao vivo", v: "R$ 497" },
-                    { t: "🎁 Estratégia de Compra com Desconto", v: "R$ 97" },
-                    { t: "🎁 Crédito para Negativados", v: "R$ 147" },
-                    { t: "🎁 Encontrando Motoristas Premium", v: "R$ 97" },
-                    { t: "🎁 Gerenciamento Express 30min", v: "R$ 67" },
-                    { t: "🎁 Do Zero aos 10k em 90 dias", v: "R$ 197" },
-                    { t: "🎁 Desafio: 1º aluguel em 7 dias", v: "R$ 197" },
+                    { t: "Manual do Locador (Completo)", v: "R$ 297" },
+                    { t: "🎁 BÔNUS: 3 Encontros ao vivo", v: "R$ 197" },
+                    { t: "🎁 Estratégia de Compra com Desconto", v: "R$ 47" },
+                    { t: "🎁 Crédito para Negativados", v: "R$ 47" },
+                    { t: "🎁 Encontrando Motoristas Premium", v: "R$ 37" },
+                    { t: "🎁 Gerenciamento Express 30min", v: "R$ 27" },
+                    { t: "🎁 Do Zero aos 10k em 90 dias", v: "R$ 27" },
+                    { t: "🎁 Desafio: 1º aluguel em 7 dias", v: "R$ 18" },
                   ].map((b) => (
                     <li key={b.t} className="flex items-center justify-between gap-3 text-sm border-b border-border/50 pb-2 last:border-0">
                       <span className="flex items-start gap-2">
@@ -556,7 +549,7 @@ function SalesPage() {
 
                 <div className="mt-5 pt-4 border-t-2 border-primary/30 text-center">
                   <p className="text-sm text-muted-foreground">Valor total:</p>
-                  <p className="text-2xl font-bold text-muted-foreground line-through">R$ 1.696</p>
+                  <p className="text-2xl font-bold text-muted-foreground line-through">R$ 697</p>
                   <p className="text-sm text-muted-foreground mt-3">Hoje, por apenas:</p>
                   <p className="text-6xl sm:text-7xl font-bold text-gradient-gold leading-none my-2">
                     R$67
@@ -685,7 +678,7 @@ function SalesPage() {
           <p className="text-muted-foreground mb-8">
             Por menos de uma pizza, você desbloqueia o sistema que pode te gerar R$3.000/mês.
           </p>
-          <p className="text-sm text-muted-foreground mb-1">De <span className="line-through">R$1.696</span> por apenas:</p>
+          <p className="text-sm text-muted-foreground mb-1">De <span className="line-through">R$697</span> por apenas:</p>
           <p className="text-7xl font-bold text-gradient-gold mb-6">R$67</p>
           <CTAButton>SIM! QUERO COMEÇAR AGORA</CTAButton>
           <p className="text-xs text-muted-foreground mt-4">Pagamento 100% seguro · Acesso imediato</p>
