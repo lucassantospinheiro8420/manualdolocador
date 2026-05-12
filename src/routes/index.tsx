@@ -44,7 +44,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Manual do Locador de Carro" },
       { property: "og:description", content: "R$3.000/mês com locação de carros em 30 min/dia." },
-      { property: "og:image", content: ebookTablet },
+      { property: "og:image", content: mockupCompleto },
     ],
   }),
 });
@@ -516,11 +516,11 @@ function SalesPage() {
 
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             <img
-              src={ebookTablet}
-              alt="Manual do Locador - tablet"
-              width={900}
-              height={1100}
-              className="w-56 sm:w-72 float-anim drop-shadow-2xl"
+              src={mockupCompleto}
+              alt="Manual do Locador - mockup completo"
+              width={1200}
+              height={800}
+              className="w-full max-w-md lg:max-w-lg float-anim drop-shadow-2xl"
               loading="lazy"
             />
 
