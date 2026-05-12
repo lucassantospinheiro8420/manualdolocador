@@ -21,12 +21,11 @@ import dep6 from "@/assets/depoimentos/A6.webp";
 import dep7 from "@/assets/depoimentos/A7.webp";
 import dep8 from "@/assets/depoimentos/A72.webp";
 
-// Os 3 primeiros já são exibidos no topo (seção #resultados)
-// Aqui ficam os 5 restantes pra evitar repetição visual
+// Os 4 mais fortes já são exibidos no topo (seção #resultados)
+// Aqui ficam os 4 restantes pra evitar repetição visual
 const depoimentos = [
   { src: dep2, alt: "Aluno conseguiu R$18.000 de desconto na compra" },
   { src: dep7, alt: "Primeiro carro alugado por R$700/semana" },
-  { src: dep5, alt: "Aluno com 2 carros alugados e R$6.000/mês" },
   { src: dep6, alt: "Começou do zero e está colocando R$3.000 no bolso" },
   { src: dep8, alt: "Aluno com primeiro carro alugado em uma semana" },
 ];
@@ -109,7 +108,7 @@ function SalesPage() {
 
       {/* RESULTADOS TOPO — social proof imediato */}
       <section id="resultados" className="px-4 py-10 bg-card/30 scroll-mt-16">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-1 mb-3">
             <StarRating />
           </div>
@@ -118,15 +117,16 @@ function SalesPage() {
             <span className="text-gradient-gold">Manual do Locador de Carro</span>
           </h2>
 
-          <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {[
               { src: dep3, alt: "Aluno colocou R$3.000 no bolso na 1ª locação" },
               { src: dep4, alt: "Aluno fez 1ª compra e locação em uma semana" },
+              { src: dep5, alt: "Aluno com 2 carros alugados e R$6.000/mês" },
               { src: dep1, alt: "Aluno chegou a 3 carros e R$10.000/mês em 60 dias" },
             ].map((d, i) => (
               <div
                 key={i}
-                className="bg-card border border-border rounded-2xl overflow-hidden shadow-card mx-auto max-w-md"
+                className="bg-card border border-border rounded-2xl overflow-hidden shadow-card hover:border-primary/60 hover:scale-[1.02] transition"
               >
                 <img src={d.src} alt={d.alt} className="w-full h-auto block" loading="lazy" />
               </div>
