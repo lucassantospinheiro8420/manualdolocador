@@ -8,6 +8,7 @@ import {
   Quote, Triangle, Rocket, DollarSign, ChevronDown,
 } from "lucide-react";
 import ebookTablet from "@/assets/ebook-tablet.webp";
+import mockupCompleto from "@/assets/mockup-completo.webp";
 import { VturbPlayer } from "@/components/VturbPlayer";
 import mentor from "@/assets/mentor.webp";
 import g1Logo from "@/assets/g1-logo.svg";
@@ -69,14 +70,14 @@ function SalesPage() {
 
           <div className="flex justify-center mb-5">
             <img
-              src={ebookTablet}
-              alt="Manual do Locador de Carro - Mockup"
+              src={mockupCompleto}
+              alt="Manual do Locador de Carro - Mockup completo"
               width={1200}
               height={800}
               fetchPriority="high"
               loading="eager"
               decoding="sync"
-              className="drop-shadow-2xl max-h-[280px] sm:max-h-[400px] w-auto float-anim"
+              className="drop-shadow-2xl max-h-[280px] sm:max-h-[420px] w-auto float-anim"
             />
           </div>
 

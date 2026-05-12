@@ -15,6 +15,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
+          if (assetInfo.names?.includes("mockup-completo.webp")) {
+            return "assets/mockup-completo.webp";
+          }
           if (assetInfo.names?.includes("ebook-tablet.webp")) {
             return "assets/ebook-tablet.webp";
           }
