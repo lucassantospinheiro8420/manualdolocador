@@ -21,13 +21,12 @@ import dep6 from "@/assets/depoimentos/A6.webp";
 import dep7 from "@/assets/depoimentos/A7.webp";
 import dep8 from "@/assets/depoimentos/A72.webp";
 
+// Os 3 primeiros já são exibidos no topo (seção #resultados)
+// Aqui ficam os 5 restantes pra evitar repetição visual
 const depoimentos = [
-  { src: dep1, alt: "Aluno chegou a 3 carros e R$10.000/mês em 60 dias" },
   { src: dep2, alt: "Aluno conseguiu R$18.000 de desconto na compra" },
-  { src: dep3, alt: "Aluno colocou R$3.000 no bolso na 1ª locação" },
   { src: dep7, alt: "Primeiro carro alugado por R$700/semana" },
   { src: dep5, alt: "Aluno com 2 carros alugados e R$6.000/mês" },
-  { src: dep4, alt: "Aluno fez 1ª compra e locação em uma semana" },
   { src: dep6, alt: "Começou do zero e está colocando R$3.000 no bolso" },
   { src: dep8, alt: "Aluno com primeiro carro alugado em uma semana" },
 ];
@@ -53,66 +52,105 @@ function SalesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Top urgency bar */}
-      <div className="bg-gradient-gold text-primary-foreground text-center py-2.5 px-3 sticky top-0 z-40">
-        <p className="text-sm sm:text-base font-bold uppercase tracking-wider leading-tight">🚗 Alugue seu 1º carro ainda hoje</p>
+      <div className="bg-gradient-gold text-primary-foreground text-center py-2 px-3 sticky top-0 z-40">
+        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">Você está prestes a conhecer o</p>
+        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider leading-tight">Manual do Locador de Carros</p>
       </div>
 
       {/* HERO */}
-      <section className="relative px-5 pt-6 pb-6 sm:pt-10 sm:pb-12">
-        <div className="absolute inset-0 bg-radial-gold opacity-50 pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto text-center fade-up">
+      <section className="relative px-5 pt-6 pb-8 sm:pt-10 sm:pb-12">
+        <div className="absolute inset-0 bg-radial-gold opacity-40 pointer-events-none" />
+        <div className="relative max-w-2xl mx-auto text-center fade-up">
 
-          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold leading-[1.25] mb-5 uppercase">
-            Copie a minha estratégia de locação de carros com 4 etapas práticas que{" "}
-            <span className="text-gradient-gold">garantem um rendimento de R$3.000 por carro</span>
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold leading-[1.2] mb-3">
+            Descubra como lucrar{" "}
+            <span className="text-gradient-gold">R$3.000 extra por mês</span>{" "}
+            investindo apenas{" "}
+            <span className="text-gradient-gold">30 minutos do seu dia</span>{" "}
+            com Locação de Carros
           </h1>
 
-          <div className="flex justify-center mb-5">
-            <img
-              src={mockupCompleto}
-              alt="Manual do Locador de Carro - Mockup completo"
-              width={1200}
-              height={800}
-              fetchPriority="high"
-              loading="eager"
-              decoding="sync"
-              className="drop-shadow-2xl max-h-[280px] sm:max-h-[420px] w-auto float-anim"
-            />
-          </div>
+          <p className="text-xs sm:text-sm text-muted-foreground max-w-lg mx-auto mb-5 leading-relaxed">
+            Uma <strong className="text-foreground">estratégia de locação de veículos</strong> que te permite
+            gerar uma renda mensal com a Uber{" "}
+            <strong className="text-foreground">mesmo que você não tenha o valor para comprar um carro.</strong>
+          </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          <div className="flex flex-col gap-2 max-w-md mx-auto mb-5 text-left">
             {[
-              "Comece do absoluto zero em 24h",
-              "Encontrando os melhores motoristas",
-              "Evitando os 3 riscos que roubam seu lucro",
+              "Mesmo que você não saiba nada sobre carros.",
+              "Tenha controle e segurança total na locação.",
+              "Evite erros que fazem iniciantes perder dinheiro.",
+              "Escolha somente os motoristas 5 estrelas.",
             ].map((b) => (
-              <div key={b} className="flex items-center gap-2 bg-card border-2 border-primary/40 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 shadow-card">
-                <Check className="size-3.5 sm:size-4 text-primary shrink-0" />
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wide">{b}</span>
+              <div key={b} className="flex items-center gap-2.5 bg-primary/15 border border-primary/40 rounded-full px-4 py-2.5">
+                <Check className="size-4 text-primary shrink-0" />
+                <span className="text-xs sm:text-sm font-medium">{b}</span>
               </div>
             ))}
           </div>
 
-          <CTAButton>QUERO O MANUAL DO LOCADOR</CTAButton>
+          <CTAButton scrollTo="resultados">TOQUE AQUI PARA GARANTIR SEU ACESSO</CTAButton>
 
-          <div className="mt-5">
-            <p className="text-lg sm:text-xl font-bold">
-              De <span className="line-through text-destructive">R$697,00</span>
-            </p>
-            <p className="text-2xl sm:text-3xl font-bold mt-1">
-              Por apenas <span className="text-success">R$67,00</span>
-            </p>
-          </div>
-
-          <div className="flex justify-center mt-5">
-            <div className="size-12 sm:size-14 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-gold animate-bounce">
-              <ChevronDown className="size-7 sm:size-8 text-primary-foreground" strokeWidth={3} />
-            </div>
+          <div className="flex justify-center mt-6">
+            <img
+              src={ebookTablet}
+              alt="Manual do Locador de Carro"
+              width={900}
+              height={1100}
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+              className="drop-shadow-2xl max-h-[300px] sm:max-h-[420px] w-auto float-anim"
+            />
           </div>
         </div>
       </section>
 
-      {/* REPORTAGEM 1 */}
+      {/* RESULTADOS TOPO — social proof imediato */}
+      <section id="resultados" className="px-4 py-10 bg-card/30 scroll-mt-16">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-1 mb-3">
+            <StarRating />
+          </div>
+          <h2 className="text-xl sm:text-2xl font-bold mb-6 leading-tight">
+            Veja abaixo resultados de quem utiliza o{" "}
+            <span className="text-gradient-gold">Manual do Locador de Carro</span>
+          </h2>
+
+          <div className="flex flex-col gap-4">
+            {[
+              { src: dep3, alt: "Aluno colocou R$3.000 no bolso na 1ª locação" },
+              { src: dep4, alt: "Aluno fez 1ª compra e locação em uma semana" },
+              { src: dep1, alt: "Aluno chegou a 3 carros e R$10.000/mês em 60 dias" },
+            ].map((d, i) => (
+              <div
+                key={i}
+                className="bg-card border border-border rounded-2xl overflow-hidden shadow-card mx-auto max-w-md"
+              >
+                <img src={d.src} alt={d.alt} className="w-full h-auto block" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VSL */}
+      <section id="vsl" className="px-4 py-10">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-base sm:text-xl font-bold mb-5">
+            Em <span className="text-gradient-gold underline">60 segundos</span> vou te explicar <span className="text-gradient-gold">TUDO</span> que você precisa saber de locação de carros!
+          </h2>
+          <div className="relative rounded-2xl overflow-hidden shadow-elevated border border-primary/30 bg-black">
+            <VturbPlayer />
+          </div>
+          <p className="mt-5 text-sm text-muted-foreground">
+            ✅ SEM IMPROVISO · ✅ SEM RISCO DE PERDER DINHEIRO · ✅ SEM ACHISMO
+          </p>
+        </div>
+      </section>
+
+      {/* REPORTAGEM 1 (G1) */}
       <section className="px-4 py-6 bg-card/30">
         <div className="max-w-2xl mx-auto">
           <div className="rounded-xl overflow-hidden border border-border shadow-card bg-white text-gray-900">
@@ -144,21 +182,6 @@ function SalesPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* VSL */}
-      <section id="vsl" className="px-4 py-10 bg-card/30">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-base sm:text-xl font-bold mb-5">
-            Em <span className="text-gradient-gold underline">60 segundos</span> vou te explicar <span className="text-gradient-gold">TUDO</span> que você precisa saber de locação de carros!
-          </h2>
-          <div className="relative rounded-2xl overflow-hidden shadow-elevated border border-primary/30 bg-black">
-            <VturbPlayer />
-          </div>
-          <p className="mt-5 text-sm text-muted-foreground">
-            ✅ SEM IMPROVISO · ✅ SEM RISCO DE PERDER DINHEIRO · ✅ SEM ACHISMO
-          </p>
         </div>
       </section>
 
