@@ -8,7 +8,7 @@ import {
   Quote, Triangle, Rocket, DollarSign, ChevronDown,
 } from "lucide-react";
 import ebookTablet from "@/assets/ebook-tablet.webp";
-import mockupCompleto from "@/assets/mockup-completo.webp";
+import mockupCompleto from "@/assets/mockup-completo-v2.webp";
 import { VturbPlayer } from "@/components/VturbPlayer";
 import mentor from "@/assets/mentor.webp";
 import g1Logo from "@/assets/g1-logo.svg";
