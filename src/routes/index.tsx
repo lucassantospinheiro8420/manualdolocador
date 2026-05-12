@@ -96,11 +96,11 @@ function SalesPage() {
           <CTAButton>QUERO O MANUAL DO LOCADOR</CTAButton>
 
           <div className="mt-5">
-            <p className="text-sm sm:text-base">
-              De <span className="line-through text-destructive font-bold">R$697,00</span>
+            <p className="text-lg sm:text-xl font-bold">
+              De <span className="line-through text-destructive">R$697,00</span>
             </p>
-            <p className="text-lg sm:text-xl font-bold mt-1">
-              Por apenas <span className="text-gradient-gold">R$67,00</span>
+            <p className="text-2xl sm:text-3xl font-bold mt-1">
+              Por apenas <span className="text-success">R$67,00</span>
             </p>
           </div>
 
