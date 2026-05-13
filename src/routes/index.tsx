@@ -574,8 +574,9 @@ function SalesPage() {
                   <p className="text-sm text-muted-foreground">Valor total:</p>
                   <p className="text-2xl font-bold text-muted-foreground line-through">R$ 697</p>
                   <p className="text-sm text-muted-foreground mt-3">Hoje, por apenas:</p>
-                  <p className="text-5xl sm:text-6xl font-bold text-gradient-gold leading-none my-2">
-                    12x de R$10,03
+                  <p className="font-bold text-gradient-gold leading-none my-2 flex items-baseline justify-center gap-1.5">
+                    <span className="text-xl sm:text-2xl">12x de</span>
+                    <span className="text-5xl sm:text-6xl">R$10,03</span>
                   </p>
                   <p className="text-xs text-muted-foreground mb-5">ou R$97 à vista</p>
 
@@ -702,7 +703,10 @@ function SalesPage() {
             Por menos de uma pizza, você desbloqueia o sistema que pode te gerar R$3.000/mês.
           </p>
           <p className="text-sm text-muted-foreground mb-1">De <span className="line-through">R$697</span> por apenas:</p>
-          <p className="text-5xl sm:text-6xl font-bold text-gradient-gold mb-2">12x de R$10,03</p>
+          <p className="font-bold text-gradient-gold mb-2 flex items-baseline justify-center gap-1.5">
+            <span className="text-2xl sm:text-3xl">12x de</span>
+            <span className="text-5xl sm:text-7xl">R$10,03</span>
+          </p>
           <p className="text-xs text-muted-foreground mb-6">ou R$97 à vista</p>
           <CTAButton>SIM! QUERO COMEÇAR AGORA</CTAButton>
           <p className="text-xs text-muted-foreground mt-4">Pagamento 100% seguro · Acesso imediato</p>
