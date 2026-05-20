@@ -48,13 +48,13 @@ export function CTAButton({
       className={cn(
         "cta-button",
         "inline-flex items-center justify-center w-full",
-        "bg-gradient-gold text-primary-foreground",
+        "bg-gradient-cta text-white",
         "font-bold uppercase tracking-wide text-base sm:text-lg",
         "py-7 sm:py-8 px-6",
-        "rounded-xl shadow-gold pulse-glow",
+        "rounded-xl shadow-cta pulse-glow",
         "no-underline text-center",
         "hover:scale-[1.02] active:scale-[0.99] transition-transform",
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+        "focus:outline-none focus-visible:ring-2 focus-visible:ring-success focus-visible:ring-offset-2",
         className,
       )}
       {...linkProps}

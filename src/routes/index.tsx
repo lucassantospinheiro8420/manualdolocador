@@ -107,7 +107,7 @@ function SalesPage() {
       </section>
 
       {/* RESULTADOS TOPO — social proof imediato */}
-      <section id="resultados" className="px-4 py-10 bg-card/30 scroll-mt-16">
+      <section id="resultados" className="px-4 py-10 bg-section-alt scroll-mt-16">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-1 mb-3">
             <StarRating />
@@ -151,7 +151,7 @@ function SalesPage() {
       </section>
 
       {/* REPORTAGEM 1 (G1) */}
-      <section className="px-4 py-6 bg-card/30">
+      <section className="px-4 py-6 bg-section-alt">
         <div className="max-w-2xl mx-auto">
           <div className="rounded-xl overflow-hidden border border-border shadow-card bg-white text-gray-900">
             {/* Header G1 */}
@@ -233,7 +233,7 @@ function SalesPage() {
       </section>
 
       {/* STORYTELLING — Por que o mercado virou o novo ouro */}
-      <section id="movimento" className="px-4 py-14 bg-card/30">
+      <section id="movimento" className="px-4 py-14 bg-section-alt">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             <span className="text-xs uppercase tracking-widest text-primary font-bold">O Movimento</span>
@@ -382,7 +382,7 @@ function SalesPage() {
       </section>
 
       {/* PAIN VS SOLUTION */}
-      <section id="dor-vs-solucao" className="px-4 py-14 bg-card/30">
+      <section id="dor-vs-solucao" className="px-4 py-14 bg-section-alt">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3">
             Você não tem medo de começar.
@@ -526,7 +526,7 @@ function SalesPage() {
       </section>
 
       {/* OFFER STACK */}
-      <section id="oferta" className="px-4 py-14 bg-card/30 relative scroll-mt-16">
+      <section id="oferta" className="px-4 py-14 bg-section-alt relative scroll-mt-16">
         <div className="absolute inset-0 bg-radial-gold opacity-30 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto">
           <div className="text-center mb-8">
@@ -574,7 +574,7 @@ function SalesPage() {
                   <p className="text-sm text-muted-foreground">Valor total:</p>
                   <p className="text-2xl font-bold text-muted-foreground line-through">R$ 697</p>
                   <p className="text-sm text-muted-foreground mt-3">Hoje, por apenas:</p>
-                  <p className="text-6xl sm:text-7xl font-bold text-gradient-gold leading-none my-2">
+                  <p className="text-6xl sm:text-7xl font-bold text-success leading-none my-2">
                     R$97
                   </p>
                   <p className="text-xs text-muted-foreground mb-5">à vista · ou 12x de R$10,03</p>
@@ -649,7 +649,7 @@ function SalesPage() {
         </div>
       </section>
       {/* MENTOR */}
-      <section className="px-4 py-14 bg-card/30">
+      <section className="px-4 py-14 bg-section-alt">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             <span className="text-xs uppercase tracking-widest text-primary font-bold">Conheça seu mentor</span>
@@ -693,7 +693,7 @@ function SalesPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="px-4 py-16 bg-card/30">
+      <section className="px-4 py-16 bg-section-alt">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Sua decisão de hoje define seu <span className="text-gradient-gold">próximo mês</span>
@@ -702,7 +702,7 @@ function SalesPage() {
             Por menos de uma pizza, você desbloqueia o sistema que pode te gerar R$3.000/mês.
           </p>
           <p className="text-sm text-muted-foreground mb-1">De <span className="line-through">R$697</span> por apenas:</p>
-          <p className="text-7xl font-bold text-gradient-gold mb-2">R$97</p>
+          <p className="text-7xl font-bold text-success mb-2">R$97</p>
           <p className="text-xs text-muted-foreground mb-6">ou 12x de R$10,03</p>
           <CTAButton id="cta-final">SIM! QUERO COMEÇAR AGORA</CTAButton>
           <p className="text-xs text-muted-foreground mt-4">Pagamento 100% seguro · Acesso imediato</p>
