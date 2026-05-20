@@ -93,14 +93,14 @@ function SalesPage() {
 
           <div className="flex justify-center mt-6">
             <img
-              src={ebookTablet}
-              alt="Manual do Locador de Carro"
-              width={900}
-              height={1100}
+              src={mockupCompleto}
+              alt="Manual do Locador de Carro - Mockup completo (livro, monitor, tablet, iPhone, laptop)"
+              width={1200}
+              height={800}
               fetchPriority="high"
               loading="eager"
               decoding="sync"
-              className="drop-shadow-2xl max-h-[300px] sm:max-h-[420px] w-auto float-anim"
+              className="drop-shadow-2xl max-h-[260px] sm:max-h-[440px] w-auto float-anim"
             />
           </div>
         </div>
