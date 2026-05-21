@@ -89,7 +89,7 @@ function SalesPage() {
             ))}
           </div>
 
-          <CTAButton id="cta-hero" scrollTo="resultados">TOQUE AQUI PARA GARANTIR SEU ACESSO</CTAButton>
+          <CTAButton id="cta-hero" scrollTo="oferta">TOQUE AQUI PARA GARANTIR SEU ACESSO</CTAButton>
 
           <div className="flex justify-center mt-6">
             <img
@@ -572,7 +572,7 @@ function SalesPage() {
 
                 <div className="mt-5 pt-4 border-t-2 border-primary/30 text-center">
                   <p className="text-sm text-muted-foreground">Valor total:</p>
-                  <p className="text-2xl font-bold text-muted-foreground line-through">R$ 697</p>
+                  <p className="text-2xl font-bold text-muted-foreground line-through">R$ 497</p>
                   <p className="text-sm text-muted-foreground mt-3">Hoje, por apenas:</p>
                   <p className="text-6xl sm:text-7xl font-bold text-success leading-none my-2">
                     R$67
@@ -701,7 +701,7 @@ function SalesPage() {
           <p className="text-muted-foreground mb-8">
             Por menos de uma pizza, você desbloqueia o sistema que pode te gerar R$3.000/mês.
           </p>
-          <p className="text-sm text-muted-foreground mb-1">De <span className="line-through">R$697</span> por apenas:</p>
+          <p className="text-sm text-muted-foreground mb-1">De <span className="line-through">R$497</span> por apenas:</p>
           <p className="text-7xl font-bold text-success mb-2">R$67</p>
           <p className="text-xs text-muted-foreground mb-6">ou 12x de R$6,93</p>
           <CTAButton id="cta-final">SIM! QUERO COMEÇAR AGORA</CTAButton>
