@@ -361,13 +361,13 @@ function SalesPage() {
                 <ul className="space-y-2.5">
                   {[
                     { t: "Manual do Locador (método completo)", v: "R$ 197" },
-                    { t: "Qual carro iniciar a operação", v: "R$ 67" },
-                    { t: "Qual seguro e rastreador usar", v: "R$ 67" },
-                    { t: "Avaliando motoristas + antecedentes", v: "R$ 97" },
-                    { t: "Aprovando crédito para negativado", v: "R$ 97" },
-                    { t: "Script de vistoria e atendimento", v: "R$ 67" },
-                    { t: "Sistema de gerenciamento", v: "R$ 47" },
-                    { t: "🎁 BÔNUS: 3 Encontros ao vivo comigo", v: "R$ 158" },
+                    { t: "Qual Carro Iniciar a Operação", v: "R$ 67" },
+                    { t: "Qual Seguro e Rastreador Usar", v: "R$ 67" },
+                    { t: "Avaliando Motoristas + Antecedentes", v: "R$ 97" },
+                    { t: "Aprovando Crédito para Negativado", v: "R$ 97" },
+                    { t: "Script de Vistoria e Atendimento", v: "R$ 67" },
+                    { t: "Sistema de Gerenciamento", v: "R$ 47" },
+                    { t: "🎁 BÔNUS: 3 Encontros ao Vivo Comigo", v: "R$ 158" },
                   ].map((b) => (
                     <li key={b.t} className="flex items-center justify-between gap-3 text-sm border-b border-border/50 pb-2 last:border-0">
                       <span className="flex items-start gap-2">
