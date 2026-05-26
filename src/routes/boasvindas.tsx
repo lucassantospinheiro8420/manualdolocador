@@ -139,7 +139,7 @@ function UpsellPage() {
 
             {/* Assiny One-Click */}
             <div className="bg-card border-2 border-primary/40 rounded-2xl p-2 sm:p-4 shadow-elevated">
-              <AssinyOneClick nodeId="IZOjgd" />
+              <AssinyOneClick nodeId="582226" />
             </div>
 
             {/* Garantia */}
