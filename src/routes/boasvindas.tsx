@@ -52,10 +52,10 @@ function UpsellPage() {
       {/* HERO + VSL — fundo escuro premium */}
       <section className="px-5 pt-10 pb-14 sm:pt-14 sm:pb-20 relative">
         <div className="max-w-3xl mx-auto text-center fade-up text-white">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-[1.15] mb-3 text-white">
+          <h1 className="text-lg sm:text-2xl md:text-3xl font-bold leading-[1.2] mb-2 text-white">
             Mas espera aí...
           </h1>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-[1.15] mb-5">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold leading-[1.2] mb-4">
             <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">
               Tenho mais uma novidade pra você
             </span>
@@ -90,7 +90,7 @@ function UpsellPage() {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-3">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold leading-tight mb-3">
                 Liberei pra você o pacote{" "}
                 <span className="text-gradient-gold">Renda Mensal Vitalícia</span>
               </h2>
