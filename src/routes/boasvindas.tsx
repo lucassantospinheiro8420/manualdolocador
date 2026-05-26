@@ -129,8 +129,8 @@ function UpsellPage() {
               </ul>
             </div>
 
-            {/* Ancoragem + preço */}
-            <div className="bg-card border-2 border-primary/40 rounded-2xl p-6 sm:p-8 text-center shadow-elevated mb-5">
+            {/* Ancoragem + preço + botão (tudo num card só) */}
+            <div className="bg-card border-2 border-primary/40 rounded-2xl p-6 sm:p-8 text-center shadow-elevated">
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-5 max-w-xl mx-auto">
                 Você gastaria <strong className="text-foreground">facilmente R$ 5.000</strong> contratando
                 cada um desses serviços separadamente.
@@ -142,19 +142,13 @@ function UpsellPage() {
               <div className="mt-6 pt-5 border-t-2 border-primary/20">
                 <p className="text-sm text-muted-foreground mb-1">Acesso liberado hoje por apenas:</p>
                 <p className="text-6xl sm:text-7xl font-bold text-success leading-none my-2">R$497</p>
-                <p className="text-xs sm:text-sm text-muted-foreground">à vista · ou 12x de R$51,40</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mb-6">à vista · ou 12x de R$51,40</p>
+
+                {/* Botão Assiny One-Click integrado, sem padding extra */}
+                <div className="assiny-clean">
+                  <AssinyOneClick nodeId="582226" />
+                </div>
               </div>
-            </div>
-
-            {/* Texto antes do checkout */}
-            <p className="text-center text-sm text-muted-foreground mb-4">
-              Confirma com <strong className="text-foreground">1 clique</strong> usando o mesmo
-              cartão da sua compra:
-            </p>
-
-            {/* Assiny One-Click */}
-            <div className="bg-white border border-border rounded-2xl p-4 sm:p-5 shadow-card">
-              <AssinyOneClick nodeId="582226" />
             </div>
 
             {/* Garantia */}
