@@ -144,10 +144,8 @@ function UpsellPage() {
                 <p className="text-6xl sm:text-7xl font-bold text-success leading-none my-2">R$497</p>
                 <p className="text-xs sm:text-sm text-muted-foreground mb-6">à vista · ou 12x de R$51,40</p>
 
-                {/* Botão Assiny One-Click integrado, sem padding extra */}
-                <div className="assiny-clean">
-                  <AssinyOneClick nodeId="582226" />
-                </div>
+                {/* Botão Assiny One-Click */}
+                <AssinyOneClick nodeId="582226" />
               </div>
             </div>
 
