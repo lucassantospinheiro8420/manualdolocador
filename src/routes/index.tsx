@@ -66,7 +66,7 @@ function SalesPage() {
 
           <h1 className="text-xl sm:text-3xl md:text-4xl font-bold leading-[1.2] mb-3">
             Copie e aplique o <span className="text-gradient-gold">meu método de locação de carros</span> e
-            garanta <span className="text-gradient-gold">R$3.000 por carro alugado</span>
+            garanta <span className="text-gradient-gold">R$3.000/mês por carro alugado</span>
           </h1>
 
           <p className="text-xs sm:text-sm text-muted-foreground max-w-lg mx-auto mb-5 leading-relaxed">
