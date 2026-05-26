@@ -62,8 +62,8 @@ function UpsellPage() {
           </h2>
 
           <p className="text-sm sm:text-base text-white/80 max-w-xl mx-auto mb-8 leading-relaxed">
-            Assista seu <strong className="text-white">vídeo de boas-vindas</strong> e descubra
-            os bônus que estão te esperando pra acelerar seus primeiros resultados.
+            Você tem direito a <strong className="text-white">3 encontros bônus de dúvidas comigo</strong>.
+            No vídeo abaixo eu te explico como participar.
           </p>
 
           {/* Player VSL */}
@@ -72,7 +72,7 @@ function UpsellPage() {
           </div>
 
           <p className="mt-5 text-xs sm:text-sm text-white/60">
-            🎁 Assista até o final pra liberar seu acesso aos bônus
+            🎥 Assista o vídeo até o final pra entender como participar
           </p>
         </div>
       </section>
