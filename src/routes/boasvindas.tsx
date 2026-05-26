@@ -41,68 +41,69 @@ function UpsellPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "linear-gradient(180deg, oklch(0.18 0.05 235) 0%, oklch(0.13 0.04 235) 60%, oklch(0.95 0.025 235) 60%)" }}>
       {/* Banner de parabéns */}
-      <div className="bg-success text-white text-center py-3 px-3">
+      <div className="bg-success text-white text-center py-3 px-3 relative z-10">
         <p className="text-sm sm:text-base font-bold uppercase tracking-wider leading-tight">
           🎉 PARABÉNS! Você está prestes a alugar seu 1º carro
         </p>
       </div>
 
-      {/* HERO + VSL */}
-      <section className="px-5 pt-8 pb-12 sm:pt-12 sm:pb-16">
-        <div className="max-w-3xl mx-auto text-center fade-up">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-[1.15] mb-3">
+      {/* HERO + VSL — fundo escuro premium */}
+      <section className="px-5 pt-10 pb-14 sm:pt-14 sm:pb-20 relative">
+        <div className="max-w-3xl mx-auto text-center fade-up text-white">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-[1.15] mb-3 text-white">
             Mas espera aí...
           </h1>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-[1.15] mb-5">
-            <span className="text-gradient-gold">Tenho mais uma novidade pra você</span>
+            <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">
+              Tenho mais uma novidade pra você
+            </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
-            Assista ao vídeo abaixo <strong className="text-foreground">até o final</strong> pra
-            entender como ir muito além do Manual e ter acesso a tudo que eu uso
-            diariamente na minha operação.
+          <p className="text-sm sm:text-base text-white/80 max-w-xl mx-auto mb-8 leading-relaxed">
+            Assista seu <strong className="text-white">vídeo de boas-vindas</strong> e descubra
+            os bônus que estão te esperando pra acelerar seus primeiros resultados.
           </p>
 
           {/* Player VSL */}
-          <div className="relative rounded-2xl overflow-hidden shadow-elevated border border-primary/30 bg-black max-w-2xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-elevated border border-white/20 bg-black max-w-2xl mx-auto">
             <UpsellVturbPlayer />
           </div>
 
-          <p className="mt-5 text-xs sm:text-sm text-muted-foreground">
-            ⚠️ A oferta especial será liberada ao final do vídeo
+          <p className="mt-5 text-xs sm:text-sm text-white/60">
+            🎁 Assista até o final pra liberar seu acesso aos bônus
           </p>
         </div>
       </section>
 
-      {/* OFERTA — revelada após 5 minutos */}
+      {/* BÔNUS — revelados após 5 minutos */}
       {showOffer && (
-        <section className="px-5 py-14 bg-section-alt fade-up">
+        <section className="px-5 py-14 fade-up relative" style={{ background: "var(--section-alt)" }}>
           <div className="max-w-3xl mx-auto">
 
             <div className="text-center mb-10">
               <div className="inline-flex items-center gap-2 bg-success/15 border border-success/40 rounded-full px-4 py-1.5 mb-4">
                 <Sparkles className="size-4 text-success" />
                 <span className="text-xs font-bold uppercase tracking-wider text-success">
-                  Oferta liberada
+                  Bônus disponível
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-3">
-                Apresento o{" "}
-                <span className="text-gradient-gold">Método Renda Mensal Vitalícia</span>
+                Liberei pra você o pacote{" "}
+                <span className="text-gradient-gold">Renda Mensal Vitalícia</span>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Tudo que eu uso na operação da Winner Locações no dia a dia, organizado
-                e liberado pra você aplicar imediatamente.
+                Os materiais que eu uso diariamente na Winner Locações, prontos
+                pra você aplicar e acelerar seus primeiros resultados.
               </p>
             </div>
 
             {/* Benefícios */}
             <div className="bg-card border border-primary/40 rounded-2xl p-6 sm:p-8 shadow-elevated mb-8">
               <h3 className="text-lg sm:text-xl font-bold mb-5 text-center">
-                📦 O que está incluso:
+                🎁 O que está incluso nos seus bônus:
               </h3>
 
               <ul className="space-y-3.5">
@@ -131,10 +132,8 @@ function UpsellPage() {
             {/* Mensagem antes do checkout */}
             <div className="text-center mb-6">
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Esse é o passo de quem leva a sério a construção de uma{" "}
-                <strong className="text-foreground">operação lucrativa de locação</strong>.
-                <br className="hidden sm:block" />
-                Com 1 clique você libera tudo isso usando o mesmo cartão da compra anterior.
+                Confirma com <strong className="text-foreground">1 clique</strong> usando o mesmo
+                cartão da sua compra e seu acesso é liberado imediatamente.
               </p>
             </div>
 
