@@ -367,7 +367,7 @@ function SalesPage() {
                     { t: "Aprovando Crédito para Negativado", v: "R$ 97" },
                     { t: "Script de Vistoria e Atendimento", v: "R$ 67" },
                     { t: "Sistema de Gerenciamento", v: "R$ 47" },
-                    { t: "🎁 BÔNUS: 3 Encontros ao Vivo Comigo", v: "R$ 158" },
+                    { t: "🎁 BÔNUS: 3 Encontros ao vivo comigo", v: "R$ 158" },
                   ].map((b) => (
                     <li key={b.t} className="flex items-center justify-between gap-3 text-sm border-b border-border/50 pb-2 last:border-0">
                       <span className="flex items-start gap-2">
