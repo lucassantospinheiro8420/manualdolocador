@@ -41,7 +41,7 @@ function UpsellPage() {
   }, []);
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "linear-gradient(180deg, oklch(0.18 0.05 235) 0%, oklch(0.13 0.04 235) 60%, oklch(0.95 0.025 235) 60%)" }}>
+    <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "oklch(0.16 0.045 235)" }}>
       {/* Banner de parabéns */}
       <div className="bg-success text-white text-center py-3 px-3 relative z-10">
         <p className="text-sm sm:text-base font-bold uppercase tracking-wider leading-tight">
@@ -50,7 +50,7 @@ function UpsellPage() {
       </div>
 
       {/* HERO + VSL — fundo escuro premium */}
-      <section className="px-5 pt-10 pb-14 sm:pt-14 sm:pb-20 relative">
+      <section className="px-5 pt-10 pb-14 sm:pt-14 sm:pb-20 relative min-h-[calc(100vh-120px)] flex items-center">
         <div className="max-w-3xl mx-auto text-center fade-up text-white">
           <h1 className="text-lg sm:text-2xl md:text-3xl font-bold leading-[1.2] mb-2 text-white">
             Mas espera aí...
