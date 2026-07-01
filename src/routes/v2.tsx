@@ -65,8 +65,8 @@ function SalesPage() {
         <div className="relative max-w-2xl mx-auto text-center fade-up">
 
           <h1 className="text-xl sm:text-3xl md:text-4xl font-bold leading-[1.2] mb-3">
-            Copie e aplique o <span className="bg-gradient-gold text-white px-2 py-0.5 rounded-md inline-block">meu método de locação de carros</span> e
-            garanta <span className="bg-gradient-gold text-white px-2 py-0.5 rounded-md inline-block">R$3.000/mês por carro alugado</span>
+            Copie e aplique o <span className="text-gradient-gold">meu método de locação de carros</span> e
+            garanta <span className="text-gradient-gold">R$3.000/mês por carro alugado</span>
           </h1>
 
           <p className="text-xs sm:text-sm text-muted-foreground max-w-lg mx-auto mb-5 leading-relaxed">
@@ -88,8 +88,6 @@ function SalesPage() {
               </div>
             ))}
           </div>
-
-          <CTAButton id="cta-hero" scrollTo="oferta">QUERO COPIAR O MANUAL</CTAButton>
 
           <div className="flex justify-center mt-6">
             <img
