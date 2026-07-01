@@ -106,6 +106,42 @@ function SalesPage() {
         </div>
       </section>
 
+      {/* PROVAS SOCIAIS: depoimentos reais (prints) + texto */}
+      <section id="provas" className="px-4 py-14 bg-section-alt">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="flex items-center justify-center gap-1 mb-3">
+              <StarRating />
+            </div>
+            <span className="text-xs uppercase tracking-widest text-primary font-bold">Prova Social</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3">
+              Esses são só <span className="text-gradient-gold">alguns</span> dos mais de{" "}
+              <span className="text-gradient-gold">3.000 alunos</span> que aplicam o método
+            </h2>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+              Locadores que saíram do zero e construíram uma renda recorrente alugando carros.
+            </p>
+          </div>
+
+          {/* Grid de prints (WhatsApp) */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+            {depoimentos.map((d, i) => (
+              <div
+                key={i}
+                className="bg-card border border-border rounded-2xl overflow-hidden shadow-card hover:border-primary/60 hover:scale-[1.02] transition"
+              >
+                <img src={d.src} alt={d.alt} className="w-full h-auto block" loading="lazy" />
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-center gap-2 mt-10 text-sm text-muted-foreground">
+            <Users className="size-4 text-primary" />
+            <span>Mais de <strong className="text-foreground">3.000 locadores</strong> já aplicaram o método</span>
+          </div>
+        </div>
+      </section>
+
       {/* MINI JORNADA DO HEROI: quebra de objeções + ancoragem */}
       <section id="jornada" className="px-4 py-14 bg-section-alt">
         <div className="max-w-3xl mx-auto">
@@ -445,42 +481,6 @@ function SalesPage() {
                 construir uma operação lucrativa e previsível com locação de veículos.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROVAS SOCIAIS: depoimentos reais (prints) + texto */}
-      <section id="provas" className="px-4 py-14 bg-section-alt">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="flex items-center justify-center gap-1 mb-3">
-              <StarRating />
-            </div>
-            <span className="text-xs uppercase tracking-widest text-primary font-bold">Prova Social</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3">
-              Esses são só <span className="text-gradient-gold">alguns</span> dos mais de{" "}
-              <span className="text-gradient-gold">3.000 alunos</span> que aplicam o método
-            </h2>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-              Locadores que saíram do zero e construíram uma renda recorrente alugando carros.
-            </p>
-          </div>
-
-          {/* Grid de prints (WhatsApp) */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-            {depoimentos.map((d, i) => (
-              <div
-                key={i}
-                className="bg-card border border-border rounded-2xl overflow-hidden shadow-card hover:border-primary/60 hover:scale-[1.02] transition"
-              >
-                <img src={d.src} alt={d.alt} className="w-full h-auto block" loading="lazy" />
-              </div>
-            ))}
-          </div>
-
-          <div className="flex items-center justify-center gap-2 mt-10 text-sm text-muted-foreground">
-            <Users className="size-4 text-primary" />
-            <span>Mais de <strong className="text-foreground">3.000 locadores</strong> já aplicaram o método</span>
           </div>
         </div>
       </section>
