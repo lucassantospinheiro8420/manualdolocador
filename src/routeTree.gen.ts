@@ -12,7 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as V3RouteImport } from './routes/v3'
 import { Route as V2RouteImport } from './routes/v2'
 import { Route as V1RouteImport } from './routes/v1'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as BoasvindasRouteImport } from './routes/boasvindas'
+import { Route as BioRouteImport } from './routes/bio'
+import { Route as HbaseRouteImport } from './routes/Hbase'
+import { Route as H2RouteImport } from './routes/H2'
+import { Route as H1RouteImport } from './routes/H1'
 import { Route as IndexRouteImport } from './routes/index'
 
 const V3Route = V3RouteImport.update({
@@ -30,9 +35,34 @@ const V1Route = V1RouteImport.update({
   path: '/v1',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BoasvindasRoute = BoasvindasRouteImport.update({
   id: '/boasvindas',
   path: '/boasvindas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BioRoute = BioRouteImport.update({
+  id: '/bio',
+  path: '/bio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HbaseRoute = HbaseRouteImport.update({
+  id: '/Hbase',
+  path: '/Hbase',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const H2Route = H2RouteImport.update({
+  id: '/H2',
+  path: '/H2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const H1Route = H1RouteImport.update({
+  id: '/H1',
+  path: '/H1',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -43,14 +73,24 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/H1': typeof H1Route
+  '/H2': typeof H2Route
+  '/Hbase': typeof HbaseRoute
+  '/bio': typeof BioRoute
   '/boasvindas': typeof BoasvindasRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/v1': typeof V1Route
   '/v2': typeof V2Route
   '/v3': typeof V3Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/H1': typeof H1Route
+  '/H2': typeof H2Route
+  '/Hbase': typeof HbaseRoute
+  '/bio': typeof BioRoute
   '/boasvindas': typeof BoasvindasRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/v1': typeof V1Route
   '/v2': typeof V2Route
   '/v3': typeof V3Route
@@ -58,22 +98,63 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/H1': typeof H1Route
+  '/H2': typeof H2Route
+  '/Hbase': typeof HbaseRoute
+  '/bio': typeof BioRoute
   '/boasvindas': typeof BoasvindasRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/v1': typeof V1Route
   '/v2': typeof V2Route
   '/v3': typeof V3Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/boasvindas' | '/v1' | '/v2' | '/v3'
+  fullPaths:
+    | '/'
+    | '/H1'
+    | '/H2'
+    | '/Hbase'
+    | '/bio'
+    | '/boasvindas'
+    | '/privacidade'
+    | '/v1'
+    | '/v2'
+    | '/v3'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/boasvindas' | '/v1' | '/v2' | '/v3'
-  id: '__root__' | '/' | '/boasvindas' | '/v1' | '/v2' | '/v3'
+  to:
+    | '/'
+    | '/H1'
+    | '/H2'
+    | '/Hbase'
+    | '/bio'
+    | '/boasvindas'
+    | '/privacidade'
+    | '/v1'
+    | '/v2'
+    | '/v3'
+  id:
+    | '__root__'
+    | '/'
+    | '/H1'
+    | '/H2'
+    | '/Hbase'
+    | '/bio'
+    | '/boasvindas'
+    | '/privacidade'
+    | '/v1'
+    | '/v2'
+    | '/v3'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  H1Route: typeof H1Route
+  H2Route: typeof H2Route
+  HbaseRoute: typeof HbaseRoute
+  BioRoute: typeof BioRoute
   BoasvindasRoute: typeof BoasvindasRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   V1Route: typeof V1Route
   V2Route: typeof V2Route
   V3Route: typeof V3Route
@@ -102,11 +183,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof V1RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/boasvindas': {
       id: '/boasvindas'
       path: '/boasvindas'
       fullPath: '/boasvindas'
       preLoaderRoute: typeof BoasvindasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bio': {
+      id: '/bio'
+      path: '/bio'
+      fullPath: '/bio'
+      preLoaderRoute: typeof BioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Hbase': {
+      id: '/Hbase'
+      path: '/Hbase'
+      fullPath: '/Hbase'
+      preLoaderRoute: typeof HbaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/H2': {
+      id: '/H2'
+      path: '/H2'
+      fullPath: '/H2'
+      preLoaderRoute: typeof H2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/H1': {
+      id: '/H1'
+      path: '/H1'
+      fullPath: '/H1'
+      preLoaderRoute: typeof H1RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -121,7 +237,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  H1Route: H1Route,
+  H2Route: H2Route,
+  HbaseRoute: HbaseRoute,
+  BioRoute: BioRoute,
   BoasvindasRoute: BoasvindasRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   V1Route: V1Route,
   V2Route: V2Route,
   V3Route: V3Route,
