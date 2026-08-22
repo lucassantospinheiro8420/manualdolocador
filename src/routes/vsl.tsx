@@ -65,8 +65,10 @@ function VslPage() {
           Aperta o play aí embaixo
         </p>
 
-        {/* PLAYER */}
-        <div className="mt-3 overflow-hidden rounded-lg">
+        {/* PLAYER
+            Borda preta fina + sombra suave pra descolar o video do fundo branco.
+            Dial: a borda e o /20 do black; a sombra e o rgba do shadow. */}
+        <div className="mt-3 overflow-hidden rounded-lg border border-black/20 shadow-[0_6px_22px_-8px_rgba(0,0,0,0.35)]">
           <vturb-smartplayer
             id={PLAYER_ID}
             style={{ display: "block", margin: "0 auto", width: "100%" }}
