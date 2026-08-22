@@ -14,12 +14,47 @@
     <link rel="dns-prefetch" href="https://scripts.converteai.net" />
     <link rel="dns-prefetch" href="https://images.converteai.net" />
     <link rel="dns-prefetch" href="https://api.vturb.com.br" />
+    <link rel="dns-prefetch" href="https://m3u8.vturb.net" />
+    <link rel="dns-prefetch" href="https://license.vturb.com" />
     <link rel="preconnect" href="https://cdn.converteai.net" crossorigin />
     <link rel="preconnect" href="https://scripts.converteai.net" crossorigin />
 
+    <!-- Rota /vsl (pagina fechada de VSL, teste A/B de abertura pelo VTurb).
+         Condicional por pathname: as outras rotas nao baixam o player do teste.
+         Feito aqui e nao no head: () da rota porque o __root nao renderiza <HeadContent />. -->
+    <script>
+    (function(){
+      if (location.pathname.toLowerCase().indexOf('/vsl') !== 0) return;
+      var head = document.head;
+      [
+        "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/ab-test/6a89e9152d15b4a5d9500304/player.js",
+        "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
+      ].forEach(function(href){
+        var l = document.createElement('link');
+        l.rel = 'preload'; l.as = 'script'; l.href = href;
+        head.appendChild(l);
+      });
+      var m = document.createElement('meta');
+      m.name = 'robots'; m.content = 'noindex, nofollow';
+      head.appendChild(m);
+      document.title = 'Manual do Locador de Carros';
+    })();
+    </script>
+
     <!-- Player Vturb (async - não bloqueia) -->
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-    <script src="https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/players/6945c577e80b76c536cd8e0a/v4/player.js" async></script>
+    <script>
+    // Player da pagina de vendas. Injetado (equivalente ao <script async> antigo) para
+    // poder PULAR a rota /vsl, que usa outro player (teste A/B). Sem isso o script antigo
+    // baixa a toa la e ainda lanca erro por nao achar o elemento dele.
+    (function(){
+      if (location.pathname.toLowerCase().indexOf('/vsl') === 0) return;
+      var s = document.createElement('script');
+      s.src = "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/players/6945c577e80b76c536cd8e0a/v4/player.js";
+      s.async = true;
+      document.head.appendChild(s);
+    })();
+    </script>
 
     <!-- Google Tag Manager (Server-Side via Stape - api.manualdolocador.com) -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://api.manualdolocador.com/1lxvsscfft.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','y5=HQJbJCc%2BWyhAXjUxQUc0XgJbVE1CVRIWSQsHDQYSGhwbCgkAEhcZCloFCQ4%3D');</script>
