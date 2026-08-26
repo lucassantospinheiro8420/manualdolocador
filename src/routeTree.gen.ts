@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Vsl2RouteImport } from './routes/vsl-2'
-import { Route as VslRouteImport } from './routes/vsl'
 import { Route as V3RouteImport } from './routes/v3'
 import { Route as V2RouteImport } from './routes/v2'
 import { Route as V1RouteImport } from './routes/v1'
@@ -25,11 +24,6 @@ import { Route as IndexRouteImport } from './routes/index'
 const Vsl2Route = Vsl2RouteImport.update({
   id: '/vsl-2',
   path: '/vsl-2',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VslRoute = VslRouteImport.update({
-  id: '/vsl',
-  path: '/vsl',
   getParentRoute: () => rootRouteImport,
 } as any)
 const V3Route = V3RouteImport.update({
@@ -94,7 +88,6 @@ export interface FileRoutesByFullPath {
   '/v1': typeof V1Route
   '/v2': typeof V2Route
   '/v3': typeof V3Route
-  '/vsl': typeof VslRoute
   '/vsl-2': typeof Vsl2Route
 }
 export interface FileRoutesByTo {
@@ -108,7 +101,6 @@ export interface FileRoutesByTo {
   '/v1': typeof V1Route
   '/v2': typeof V2Route
   '/v3': typeof V3Route
-  '/vsl': typeof VslRoute
   '/vsl-2': typeof Vsl2Route
 }
 export interface FileRoutesById {
@@ -123,7 +115,6 @@ export interface FileRoutesById {
   '/v1': typeof V1Route
   '/v2': typeof V2Route
   '/v3': typeof V3Route
-  '/vsl': typeof VslRoute
   '/vsl-2': typeof Vsl2Route
 }
 export interface FileRouteTypes {
@@ -139,7 +130,6 @@ export interface FileRouteTypes {
     | '/v1'
     | '/v2'
     | '/v3'
-    | '/vsl'
     | '/vsl-2'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -153,7 +143,6 @@ export interface FileRouteTypes {
     | '/v1'
     | '/v2'
     | '/v3'
-    | '/vsl'
     | '/vsl-2'
   id:
     | '__root__'
@@ -167,7 +156,6 @@ export interface FileRouteTypes {
     | '/v1'
     | '/v2'
     | '/v3'
-    | '/vsl'
     | '/vsl-2'
   fileRoutesById: FileRoutesById
 }
@@ -182,7 +170,6 @@ export interface RootRouteChildren {
   V1Route: typeof V1Route
   V2Route: typeof V2Route
   V3Route: typeof V3Route
-  VslRoute: typeof VslRoute
   Vsl2Route: typeof Vsl2Route
 }
 
@@ -193,13 +180,6 @@ declare module '@tanstack/react-router' {
       path: '/vsl-2'
       fullPath: '/vsl-2'
       preLoaderRoute: typeof Vsl2RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/vsl': {
-      id: '/vsl'
-      path: '/vsl'
-      fullPath: '/vsl'
-      preLoaderRoute: typeof VslRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/v3': {
@@ -286,7 +266,6 @@ const rootRouteChildren: RootRouteChildren = {
   V1Route: V1Route,
   V2Route: V2Route,
   V3Route: V3Route,
-  VslRoute: VslRoute,
   Vsl2Route: Vsl2Route,
 }
 export const routeTree = rootRouteImport

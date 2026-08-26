@@ -5,9 +5,9 @@ import { useEffect } from "react";
  * Pagina FECHADA de VSL: tarja + headline + sub + ordem de play + player + rodape.
  * Nada mais. Objetivo unico e play rate; quem vende e o video.
  *
- * As rotas /vsl e /vsl-2 usam este MESMO componente e mudam SO o player,
- * porque a variavel em teste ali e o video, nao a pagina. Se um dia a copy
- * de uma rota precisar divergir, essa rota para de usar este componente.
+ * Toda rota de VSL usa este MESMO componente e muda SO o player, porque a
+ * variavel em teste ali e o video, nao a pagina. Se um dia a copy de uma
+ * rota precisar divergir, essa rota para de usar este componente.
  *
  * O preload do player e o noindex NAO ficam aqui: o __root nao renderiza
  * <HeadContent />, entao head() das rotas nao chega no DOM. Eles moram no

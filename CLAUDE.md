@@ -61,11 +61,12 @@ Estrutura enxuta (inspirada no Contrato Anti-Risco que converte bem):
 
 **Configurar no Assiny:** redirect pós-compra do Manual → `https://manualdolocador.com/boasvindas`
 
-### `/vsl` e `/vsl-2` — páginas FECHADAS de VSL
+### `/vsl-2` — página FECHADA de VSL
 
 Página fechada: **tarja vermelha + headline + sub + ordem de play + player + rodapé. Nada mais.** O objetivo é play rate; quem vende é o vídeo. **Nada acima do player pode revelar preço, produto, compra ou que veio de anúncio**, porque a pessoa entra sem saber que é venda e descobre dentro da VSL.
 
-- **Layout compartilhado:** `src/components/PaginaVslFechada.tsx`. As rotas são cascas de 15 linhas que só passam o player. **Correção de copy é num lugar só e vale pras duas.** (Exceção consciente à regra "cada slug = um arquivo autossuficiente": aqui a variável testada é o vídeo, não a página. Se a copy de uma rota precisar divergir, essa rota para de usar o componente.)
+- **Layout compartilhado:** `src/components/PaginaVslFechada.tsx`. A rota é uma casca de 15 linhas que só passa o player, então **quando houver mais de uma rota de VSL, correção de copy é num lugar só e vale pra todas.** (Exceção consciente à regra "cada slug = um arquivo autossuficiente": aqui a variável testada é o vídeo, não a página. Se a copy de uma rota precisar divergir, essa rota para de usar o componente.)
+- **Histórico:** existiu uma rota `/vsl` (teste A/B `ab-6a89e915...`), aposentada em 2026-08-22 sem nunca receber tráfego. Volta com `git revert` do commit que a removeu, mais a linha dela no `MAPA`.
 - **O botão de compra não está no código.** Ele é do VTurb e aparece por tempo assistido, no momento do pitch. A rotação dos vídeos também é do VTurb (teste A/B do player).
 - **Preload do player + `noindex` ficam no `<head>` do `index.html`**, num mapa `pathname -> player.js`. Não use `head:` na rota: **o `__root` não renderiza `<HeadContent />`, então `head()` não chega no DOM neste projeto** (vale pra todas as rotas, `/privacidade` e `/Hbase` inclusive).
 - **O player da página de vendas não carrega nessas rotas** (o mapa acima seta `window.__VSL_PAGE`).
