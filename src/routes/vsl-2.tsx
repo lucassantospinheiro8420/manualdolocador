@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PaginaVslFechada } from "@/components/PaginaVslFechada";
 
-// Teste A/B de ABERTURA da VSL (rotacao das aberturas feita pelo proprio VTurb).
-const PLAYER_ID = "ab-6a89e9152d15b4a5d9500304";
+// Segundo teste A/B de video, MESMA pagina da /vsl. A unica variavel e o player.
+const PLAYER_ID = "ab-6a8f7a6904f647dafd180efc";
 const PLAYER_SCRIPT =
-  "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/ab-test/6a89e9152d15b4a5d9500304/player.js";
+  "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/ab-test/6a8f7a6904f647dafd180efc/player.js";
 
-export const Route = createFileRoute("/vsl")({
+export const Route = createFileRoute("/vsl-2")({
   component: () => (
     <PaginaVslFechada playerId={PLAYER_ID} playerScript={PLAYER_SCRIPT} />
   ),

@@ -19,21 +19,29 @@
     <link rel="preconnect" href="https://cdn.converteai.net" crossorigin />
     <link rel="preconnect" href="https://scripts.converteai.net" crossorigin />
 
-    <!-- Rota /vsl (pagina fechada de VSL, teste A/B de abertura pelo VTurb).
-         Condicional por pathname: as outras rotas nao baixam o player do teste.
-         Feito aqui e nao no head: () da rota porque o __root nao renderiza <HeadContent />. -->
+    <!-- Paginas FECHADAS de VSL (teste A/B de video pelo VTurb).
+         Cada rota tem o SEU player. Preload + noindex sao aplicados so na rota
+         da vez, entao a pagina de vendas nao baixa nada disso.
+         Feito aqui e nao no head: () da rota porque o __root nao renderiza <HeadContent />.
+         ROTA NOVA DE VSL: adicione uma linha no MAPA abaixo e crie src/routes/<slug>.tsx. -->
     <script>
     (function(){
-      if (location.pathname.toLowerCase().indexOf('/vsl') !== 0) return;
+      var BASE = "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/ab-test/";
+      var MAPA = {
+        "/vsl":   BASE + "6a89e9152d15b4a5d9500304/player.js",
+        "/vsl-2": BASE + "6a8f7a6904f647dafd180efc/player.js"
+      };
+      var rota = location.pathname.toLowerCase().replace(/\/+$/, "") || "/";
+      var player = MAPA[rota];
+      if (!player) return;
+      window.__VSL_PAGE = true;
       var head = document.head;
-      [
-        "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/ab-test/6a89e9152d15b4a5d9500304/player.js",
-        "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
-      ].forEach(function(href){
-        var l = document.createElement('link');
-        l.rel = 'preload'; l.as = 'script'; l.href = href;
-        head.appendChild(l);
-      });
+      [player, "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"]
+        .forEach(function(href){
+          var l = document.createElement('link');
+          l.rel = 'preload'; l.as = 'script'; l.href = href;
+          head.appendChild(l);
+        });
       var m = document.createElement('meta');
       m.name = 'robots'; m.content = 'noindex, nofollow';
       head.appendChild(m);
@@ -48,7 +56,7 @@
     // poder PULAR a rota /vsl, que usa outro player (teste A/B). Sem isso o script antigo
     // baixa a toa la e ainda lanca erro por nao achar o elemento dele.
     (function(){
-      if (location.pathname.toLowerCase().indexOf('/vsl') === 0) return;
+      if (window.__VSL_PAGE) return;
       var s = document.createElement('script');
       s.src = "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/players/6945c577e80b76c536cd8e0a/v4/player.js";
       s.async = true;
