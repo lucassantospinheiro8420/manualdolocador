@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PaginaVslFechada } from "@/components/PaginaVslFechada";
 
-// T-016: teste de PRECO com abertura congelada (LEAD 04).
-// 2 videos no A/B do VTurb: take R$67 vs take R$97, 50/50.
-// Cada video tem o SEU botao/checkout (OFERTA R$67 vs OFERTA R$97).
+// T-017: teste de PRECO com abertura congelada (LEAD 04).
+// 2 videos no A/B do VTurb: take R$67 vs take R$87, 50/50.
+// Cada video tem o SEU botao/checkout (OFERTA R$67 vs OFERTA R$87).
 const PLAYER_ID = "ab-6a95ee577e1edfe862b04d8e";
 const PLAYER_SCRIPT =
   "https://scripts.converteai.net/e39e1358-c294-4887-9186-6c5c21c2dc26/ab-test/6a95ee577e1edfe862b04d8e/player.js";
