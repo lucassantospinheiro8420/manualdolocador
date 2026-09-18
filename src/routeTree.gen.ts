@@ -18,6 +18,7 @@ import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as Hbase87RouteImport } from './routes/hbase87'
 import { Route as Hbase47RouteImport } from './routes/hbase47'
 import { Route as Hbase27RouteImport } from './routes/hbase27'
+import { Route as HbaseV2RouteImport } from './routes/hbase-v2'
 import { Route as BoasvindasRouteImport } from './routes/boasvindas'
 import { Route as BioRouteImport } from './routes/bio'
 import { Route as HbaseRouteImport } from './routes/Hbase'
@@ -70,6 +71,11 @@ const Hbase27Route = Hbase27RouteImport.update({
   path: '/hbase27',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HbaseV2Route = HbaseV2RouteImport.update({
+  id: '/hbase-v2',
+  path: '/hbase-v2',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BoasvindasRoute = BoasvindasRouteImport.update({
   id: '/boasvindas',
   path: '/boasvindas',
@@ -108,6 +114,7 @@ export interface FileRoutesByFullPath {
   '/Hbase': typeof HbaseRoute
   '/bio': typeof BioRoute
   '/boasvindas': typeof BoasvindasRoute
+  '/hbase-v2': typeof HbaseV2Route
   '/hbase27': typeof Hbase27Route
   '/hbase47': typeof Hbase47Route
   '/hbase87': typeof Hbase87Route
@@ -125,6 +132,7 @@ export interface FileRoutesByTo {
   '/Hbase': typeof HbaseRoute
   '/bio': typeof BioRoute
   '/boasvindas': typeof BoasvindasRoute
+  '/hbase-v2': typeof HbaseV2Route
   '/hbase27': typeof Hbase27Route
   '/hbase47': typeof Hbase47Route
   '/hbase87': typeof Hbase87Route
@@ -143,6 +151,7 @@ export interface FileRoutesById {
   '/Hbase': typeof HbaseRoute
   '/bio': typeof BioRoute
   '/boasvindas': typeof BoasvindasRoute
+  '/hbase-v2': typeof HbaseV2Route
   '/hbase27': typeof Hbase27Route
   '/hbase47': typeof Hbase47Route
   '/hbase87': typeof Hbase87Route
@@ -162,6 +171,7 @@ export interface FileRouteTypes {
     | '/Hbase'
     | '/bio'
     | '/boasvindas'
+    | '/hbase-v2'
     | '/hbase27'
     | '/hbase47'
     | '/hbase87'
@@ -179,6 +189,7 @@ export interface FileRouteTypes {
     | '/Hbase'
     | '/bio'
     | '/boasvindas'
+    | '/hbase-v2'
     | '/hbase27'
     | '/hbase47'
     | '/hbase87'
@@ -196,6 +207,7 @@ export interface FileRouteTypes {
     | '/Hbase'
     | '/bio'
     | '/boasvindas'
+    | '/hbase-v2'
     | '/hbase27'
     | '/hbase47'
     | '/hbase87'
@@ -214,6 +226,7 @@ export interface RootRouteChildren {
   HbaseRoute: typeof HbaseRoute
   BioRoute: typeof BioRoute
   BoasvindasRoute: typeof BoasvindasRoute
+  HbaseV2Route: typeof HbaseV2Route
   Hbase27Route: typeof Hbase27Route
   Hbase47Route: typeof Hbase47Route
   Hbase87Route: typeof Hbase87Route
@@ -290,6 +303,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Hbase27RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hbase-v2': {
+      id: '/hbase-v2'
+      path: '/hbase-v2'
+      fullPath: '/hbase-v2'
+      preLoaderRoute: typeof HbaseV2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/boasvindas': {
       id: '/boasvindas'
       path: '/boasvindas'
@@ -342,6 +362,7 @@ const rootRouteChildren: RootRouteChildren = {
   HbaseRoute: HbaseRoute,
   BioRoute: BioRoute,
   BoasvindasRoute: BoasvindasRoute,
+  HbaseV2Route: HbaseV2Route,
   Hbase27Route: Hbase27Route,
   Hbase47Route: Hbase47Route,
   Hbase87Route: Hbase87Route,
